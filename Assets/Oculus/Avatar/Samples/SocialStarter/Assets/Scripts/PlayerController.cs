@@ -11,7 +11,7 @@ public class PlayerController : SocialPlatformManager
     // Secondary camera to debug and view the whole scene from above
     public Camera spyCamera;
 
-    // The OVRCameraRig for the main player so we can disable it
+    // The OVRCameraRig for the main playerModel so we can disable it
     private GameObject cameraRig;
 
     private bool showUI = true;

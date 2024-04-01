@@ -31,6 +31,9 @@ public class LocomotionTechnique : MonoBehaviour
     {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         // Please implement your LOCOMOTION TECHNIQUE in this script :D.
+
+
+        /*
         leftTriggerValue = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, leftController); 
         rightTriggerValue = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, rightController); 
 
@@ -77,7 +80,14 @@ public class LocomotionTechnique : MonoBehaviour
             }
         }
         this.transform.position = this.transform.position + (offset) * translationGain;
-
+        */
+        
+        if (this.transform.position.y < -10)
+        {
+            this.transform.position = parkourCounter.currentRespawnPos;
+            this.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            this.GetComponent<Rigidbody>().ResetInertiaTensor();
+        }
 
         ////////////////////////////////////////////////////////////////////////////////
         // These are for the game mechanism.
@@ -85,7 +95,7 @@ public class LocomotionTechnique : MonoBehaviour
         {
             if (parkourCounter.parkourStart)
             {
-                this.transform.position = parkourCounter.currentRespawnPos;
+                //this.transform.position = parkourCounter.currentRespawnPos;
             }
         }
     }

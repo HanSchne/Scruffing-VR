@@ -27,6 +27,6 @@ public class RemotePlayer
     // the previous received rotations to interpolate from
     public Quaternion receivedRootRotationPrior;
 
-    // the voip tracker for the player
+    // the voip tracker for the playerModel
     public VoipAudioSourceHiLevel voipSource;
 }

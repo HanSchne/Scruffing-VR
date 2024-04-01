@@ -32,7 +32,7 @@ public class SocialPlatformManager : MonoBehaviour
 
     private float voiceCurrent = 0.0f;
 
-    // Local player
+    // Local playerModel
     private UInt32 packetSequence = 0;
 
     public OvrAvatar localAvatarPrefab;
@@ -116,7 +116,7 @@ public class SocialPlatformManager : MonoBehaviour
         sphereMesh = roomSphere.GetComponent<MeshRenderer>();
         floorMesh = roomFloor.GetComponent<MeshRenderer>();
 
-        // Set up the local player
+        // Set up the local playerModel
         localTrackingSpace = this.transform.Find("OVRCameraRig/TrackingSpace").gameObject;
         localPlayerHead = this.transform.Find("OVRCameraRig/TrackingSpace/CenterEyeAnchor").gameObject;
 
